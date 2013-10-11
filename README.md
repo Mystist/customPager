@@ -2,6 +2,10 @@
 
 `customPager` is a jQuery pager plugin.
 
+It's simple and customize.
+
+It has no `style` on it.
+
 You can pager your html in two ways:  
 
 1. Pager it in the front end.  
