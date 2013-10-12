@@ -52,9 +52,13 @@
         var start = (this.currentPage-1) * this.pageSize;
         var end = start + this.pageSize;
         this.currentData = this.data.slice(start, end);
+        this.render();
       } else {
-        this.st.fetch(this);
+        this.st.fetch(this, this.render);
       }
+    },
+    
+    render: function() {
       this.$this.find("*[tag='currentPage']").html(this.currentPage);
       this.$this.find("*[tag='totalPage']").html(this.totalPage);
       this.st.callback(this);
